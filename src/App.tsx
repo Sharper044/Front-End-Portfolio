@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles, ThemeProvider } from '@material-ui/styles';
+import React from 'react';
 import './App.css';
+import { theme } from './styles/theme';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const useStyles = makeStyles(() => ({
+  root: {
+    flexGrow: 1,
+    textAlign: 'center',
+  },
+}));
+
+const App = () => {
+  const classes = useStyles();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      <div className={classes.root}>
       </div>
-    );
-  }
+    </ThemeProvider>
+  );
 }
 
 export default App;
