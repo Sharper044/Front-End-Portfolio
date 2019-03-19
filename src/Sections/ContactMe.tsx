@@ -5,6 +5,7 @@ import { ILink } from './RecentWork';
 
 interface ISocialProps {
   socialLinks: ILink[];
+  page: string;
 }
 
 const useStyles = makeStyles((_theme: Theme) => ({
@@ -17,7 +18,7 @@ const ContactMe = (props: ISocialProps) => {
   console.log(props);
 
   return (
-    <div className={classes.root}/>
+    <div className={classes.root} id="contact"/>
   );
 };
 

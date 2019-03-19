@@ -5,18 +5,22 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    // "isolatedModules": true,
     "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
+    "isolatedModules": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "plugins": [{"name": "typescript-tslint-plugin"}],
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin"
+      }
+    ],
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
