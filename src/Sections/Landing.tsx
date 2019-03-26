@@ -7,13 +7,15 @@ export interface ILandingProps {
   title: string;
   subtitle?: string;
   img1url: string;
+  img1aria: string;
   img2url?: string;
+  img2aria?: string;
 }
 
 const useStyles = makeStyles((_theme: Theme) => ({
   root: {
     width: '100%',
-    paddingTop: '32px',
+    paddingTop: '100px',
   },
   title: {
     fontFamily: 'Russo One',
@@ -29,16 +31,19 @@ const useStyles = makeStyles((_theme: Theme) => ({
     paddingRight: '100px',
     maxWidth: '434px',
     marginTop: '75px',
-    marginBottom: '100px'
+    marginBottom: '100px',
   },
   img2Container: {
     paddingLeft: '24px',
     paddingRight: '24px',
-    maxWidth: '900px',
+    maxWidth: '1200px',
   },
   img: {
     width: '100%',
     height: 'auto',
+  },
+  img1: {
+    borderRadius: '50%',
   }
 }));
 
@@ -50,12 +55,12 @@ const Landing = (props: ILandingProps) => {
       <h1 className={classes.title}>{props.title}</h1>
       <Typography variant='headline'>{props.subtitle}</Typography>
       <div className={`${classes.imgContainer} ${classes.img1Container}`}>
-        <img alt="Picture of Stuart Harper" src={props.img1url} className={classes.img}/>
+        <img alt={props.img1aria} src={props.img1url} className={`${classes.img} ${classes.img1}`}/>
       </div>
       <div className={`${classes.imgContainer} ${classes.img2Container}`}>
         {
-        props.img2url && 
-          <img alt="Cool picture of code" src={props.img2url} className={classes.img}/>
+        props.img2url && props.img2aria && 
+          <img alt={props.img2aria} src={props.img2url} className={classes.img}/>
         }
       </div>
     </div>
