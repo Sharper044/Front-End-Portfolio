@@ -2,6 +2,7 @@ import { ILandingProps } from "./Sections/Landing";
 import { IIntroAndSkillsProps } from "./Sections/IntroAndSkills";
 import { IRecentWorkProps } from "./Sections/RecentWork";
 import { ICompaniesProps } from "./Sections/Companies";
+import { IReferralsProps } from "./Sections/Referrals";
 
 import computers from './assets/Computer graphic.png';
 import me from './assets/0.jpeg';
@@ -16,6 +17,8 @@ import byuLogo from './assets/BYU.png';
 import devMtnLogo from './assets/devmountain.logo.words.png';
 import imftLogo from './assets/imft_logo.png';
 import ktechLogo from './assets/ktech.png';
+import jacob from './assets/JacobSiebach.jpeg';
+import paul from './assets/PaulDavis.jpeg';
 
 export const codeLandingData: ILandingProps = {
   title: 'Code Page Title',
@@ -236,4 +239,31 @@ export const codeCompaniesData: ICompaniesProps = {
       link: 'http://ktech-eng.com/',
     }
   ]
-}
+};
+
+export const codeReferralsData: IReferralsProps = {
+  title: 'Testimonials',
+  subtitle: 'I am grateful to these people I have worked with who have vouched for my abilities...',
+  referrals: [
+    {
+      photoUrl: jacob,
+      text: [
+        'One of the most valuable assets attributable to Stuart is his character. He has always been a man of integrity. At work or play, he consistently exhibits an attitude of kindness and humility, traits often difficult to find in the industry. Not only that, he is patient with others, which is essential during communication across teams, be it between developers, project management, or the business owners.',
+        'His main advantage is in his ability to think. Over the decades of my software experience, I have known many programmers who are given a task and immediately begin writing code. Stuart has the intelligence to step back, analyze the problem at hand, gather information, and then design an effective solution. This makes him a software engineer and not just a “coder”.',
+        'If you want someone who will work hard and learn fast, Stuart is your man. If you need someone who can disassociate complex problems into workable chunks, and then see those chunks developed to completion, Stuart is your man. If you hope to hire someone who can work well with all types of people in various situations, then Stuart Harper is your man.',
+      ],
+      name: 'Jacob Siebach',
+      title: 'Software Engineer',
+      company: 'Brigham Young University',
+    },
+    {
+      photoUrl: paul,
+      text: [
+        'While at DevMountain, Stuart impressed me with his dedication to learning and his ability to explain complex concepts to other students. Stuart demonstrated the ability to drink from a firehose of information and then turn around and produce well-thought-out and executed apps that clearly demonstrated his grasp of the concepts.',
+      ],
+      name: 'Paul Davis',
+      title: 'CEO & Co-Founder',
+      company: 'MyTourGuide',
+    }
+  ]
+};

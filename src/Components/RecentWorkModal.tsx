@@ -1,11 +1,13 @@
 import { Theme } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/styles';
 import React from 'react';
 import { IRecentWork } from '../Sections/RecentWork';
-import BackIcon from '@material-ui/icons/ArrowBack';
-import ForwardIcon from '@material-ui/icons/ArrowForward';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import { Card, Typography, Modal } from '@material-ui/core';
+// import BackIcon from '@material-ui/icons/ArrowBack';
+// import ForwardIcon from '@material-ui/icons/ArrowForward';
+import { Card, Typography, Modal, Button, MobileStepper } from '@material-ui/core';
+import SwipeableViews from 'react-swipeable-views';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 const useStyles = makeStyles((theme: Theme) => ({
   modal: {
@@ -21,6 +23,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    textAlign: 'center',
+  },
+  center: {
     textAlign: 'center',
   },
   images: {
@@ -53,6 +58,21 @@ interface IProps extends IRecentWork {
 
 const RecentWorkModal = (props: IProps) => {
   const classes = useStyles();
+  const theme: Theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = props.images.length;
+
+  function handleNext() {
+    setActiveStep(prevActiveStep => prevActiveStep + 1);
+  }
+
+  function handleBack() {
+    setActiveStep(prevActiveStep => prevActiveStep - 1);
+  }
+
+  function handleStepChange(step: number) {
+    setActiveStep(step);
+  }
 
   return (
     <Modal
@@ -64,31 +84,40 @@ const RecentWorkModal = (props: IProps) => {
       >
         <Card className={classes.modalCard}>
           <figure>
-            <CarouselProvider
-              naturalSlideWidth={400}
-              naturalSlideHeight={1}
-              totalSlides={props.images.length}
+            <SwipeableViews
+              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+              index={activeStep}
+              onChangeIndex={handleStepChange}
+              enableMouseEvents
               className={classes.figure}
             >
-              <Slider trayTag="div">
-                {
-                  props.images.map((image, i) => (
-                    <Slide index={i} tag="div" className={classes.figure}>
-                      <Image hasMasterSpinner={false} src={image.imgUrl} alt={image.ariaLabel} className={classes.images}/>
-                      <Typography>{image.description}</Typography>
-                    </Slide>
-                  ))
-                }
-              </Slider>
-              <div>
-                <ButtonBack className='MuiButtonBase-root-63 MuiButton-root-37 MuiButton-sizeSmall-60'>
-                  <BackIcon/>
-                </ButtonBack>
-                <ButtonNext className='MuiButtonBase-root-63 MuiButton-root-37 MuiButton-sizeSmall-60'>
-                  <ForwardIcon/>
-                </ButtonNext>
-              </div>
-            </CarouselProvider>
+              {
+                props.images.map((image, i) => (
+                  <div key={i} className={classes.center}>
+                    <img src={image.imgUrl} alt={image.ariaLabel} className={classes.images}/>
+                    <Typography>{image.description}</Typography>
+                  </div>
+                ))
+              } 
+            </SwipeableViews>
+            <MobileStepper
+              steps={maxSteps}
+              position="static"
+              activeStep={activeStep}
+              // className={classes.stepper}
+              nextButton={
+                <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                  Next
+                  {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                </Button>
+              }
+              backButton={
+                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                  {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                  Back
+                </Button>
+              }
+            /> 
           </figure>
           <aside className={classes.aside}>
             <h1 className={classes.title}>{props.title}</h1>

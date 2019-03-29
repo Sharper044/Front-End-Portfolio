@@ -3,10 +3,11 @@ import { makeStyles } from '@material-ui/styles';
 import React from 'react';
 import Header from '../components/Header';
 import Landing from '../Sections/Landing';
-import { codeLandingData, codeIntroAndSkillsData, codeRecentWorkData, codeCompaniesData } from '../data';
+import { codeLandingData, codeIntroAndSkillsData, codeRecentWorkData, codeCompaniesData, codeReferralsData } from '../data';
 import IntroAndSkills from '../Sections/IntroAndSkills';
 import RecentWork from '../Sections/RecentWork';
 import Companies from '../Sections/Companies';
+import Referrals from '../Sections/Referrals';
 
 const useStyles = makeStyles((_theme: Theme) => ({
   root: {
@@ -23,6 +24,7 @@ const Code = () => {
       <IntroAndSkills {...codeIntroAndSkillsData}/>
       <RecentWork url='/code' {...codeRecentWorkData}/>
       <Companies {...codeCompaniesData}/>
+      <Referrals {...codeReferralsData}/>
     </div>
   );
 };
