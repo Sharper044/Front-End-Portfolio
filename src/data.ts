@@ -1,11 +1,21 @@
 import { ILandingProps } from "./Sections/Landing";
-import me from './assets/0.jpeg';
-import computers from './assets/Computer graphic.png';
 import { IIntroAndSkillsProps } from "./Sections/IntroAndSkills";
 import { IRecentWorkProps } from "./Sections/RecentWork";
+import { ICompaniesProps } from "./Sections/Companies";
+
+import computers from './assets/Computer graphic.png';
+import me from './assets/0.jpeg';
 import frontendIcon from './assets/frontend.png';
 import backendIcon from './assets/backend.png';
 import miscIcon from './assets/Misc icon_ .jpg';
+import familyStoryMain from './assets/landing.png';
+import rewMain from './assets/REW_homepage.jpg';
+import overstockLogo from './assets/overstock.png';
+import tcnLogo from './assets/TCN.png';
+import byuLogo from './assets/BYU.png';
+import devMtnLogo from './assets/devmountain.logo.words.png';
+import imftLogo from './assets/imft_logo.png';
+import ktechLogo from './assets/ktech.png';
 
 export const codeLandingData: ILandingProps = {
   title: 'Code Page Title',
@@ -67,7 +77,7 @@ export const codeIntroAndSkillsData: IIntroAndSkillsProps = {
 
 export const codeRecentWorkData: IRecentWorkProps = {
   title: 'My Recent Work',
-  description: 'Here are some of my coding projects. Want to see more?',
+  description: 'Here are some of my recent coding projects. Want to see more?',
   recentWorkItems: [
     {
       title: 'project 1',
@@ -78,12 +88,14 @@ export const codeRecentWorkData: IRecentWorkProps = {
           link: 'link url'
         }
       ],
-      mainImgUrl: 'img url',
-      ariaLabel: 'img label',
+      briefDesc: 'Family Story: an online immersive storytelling tool.',
+      mainImgUrl: familyStoryMain,
+      ariaLabel: 'family-story.online',
       images: [
         {
-          imgUrl: 'img 1 url',
+          imgUrl: familyStoryMain,
           ariaLabel: 'img 1 aria label',
+          description: 'desc'
         }
       ],
     },
@@ -96,12 +108,14 @@ export const codeRecentWorkData: IRecentWorkProps = {
           link: 'link url'
         }
       ],
-      mainImgUrl: 'img url',
-      ariaLabel: 'img label',
+      briefDesc: 'Real Estate Watchdog: an investment analysis tool.',
+      mainImgUrl: rewMain,
+      ariaLabel: 'realestate-watchdog.com',
       images: [
         {
           imgUrl: 'img 2 url',
           ariaLabel: 'img 2 aria label',
+          description: 'desc'
         }
       ],
     },
@@ -114,12 +128,14 @@ export const codeRecentWorkData: IRecentWorkProps = {
           link: 'link url'
         }
       ],
+      briefDesc: '',
       mainImgUrl: 'img url',
       ariaLabel: 'img label',
       images: [
         {
           imgUrl: 'img 3 url',
           ariaLabel: 'img 3 aria label',
+          description: 'desc'
         }
       ],
     },
@@ -132,12 +148,14 @@ export const codeRecentWorkData: IRecentWorkProps = {
           link: 'link url'
         }
       ],
+      briefDesc: '',
       mainImgUrl: 'img url',
       ariaLabel: 'img label',
       images: [
         {
           imgUrl: 'img 4 url',
           ariaLabel: 'img 4 aria label',
+          description: 'desc'
         }
       ],
     },
@@ -150,12 +168,14 @@ export const codeRecentWorkData: IRecentWorkProps = {
           link: 'link url'
         }
       ],
+      briefDesc: '',
       mainImgUrl: 'img url',
       ariaLabel: 'img label',
       images: [
         {
           imgUrl: 'img 1 url',
           ariaLabel: 'img 1 aria label',
+          description: 'desc'
         }
       ],
     },
@@ -168,14 +188,52 @@ export const codeRecentWorkData: IRecentWorkProps = {
           link: 'link url'
         }
       ],
+      briefDesc: '',
       mainImgUrl: 'img url',
       ariaLabel: 'img label',
       images: [
         {
           imgUrl: 'img 1 url',
           ariaLabel: 'img 1 aria label',
+          description: 'desc'
         }
       ],
+    }
+  ]
+}
+
+export const codeCompaniesData: ICompaniesProps = {
+  header: 'I am proud to have coded for the following companies:',
+  companies: [
+    {
+      name: 'Overstock.com',
+      imgUrl: overstockLogo,
+      link: 'https://www.overstock.com/',
+    },
+    {
+      name: 'TCN inc.',
+      imgUrl: tcnLogo,
+      link: 'https://www.tcn.com/',
+    },
+    {
+      name: 'IM Flash Technologies (now Micron)',
+      imgUrl: imftLogo,
+      link: 'http://www.imflash.com/',
+    },
+    {
+      name: 'DevMountain Student Developers',
+      imgUrl: devMtnLogo,
+      link: 'https://devmountain.com/',
+    },
+    {
+      name: 'Brigham Young University Physics Department',
+      imgUrl: byuLogo,
+      link: 'https://www.physics.byu.edu/',
+    },
+    {
+      name: 'KTech Engineering',
+      imgUrl: ktechLogo,
+      link: 'http://ktech-eng.com/',
     }
   ]
 }

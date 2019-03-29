@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, MenuItem, Divider, Button } from '@material-ui/core';
+import { Menu, MenuItem, Divider, Button, AppBar } from '@material-ui/core';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import { Theme } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu'
@@ -10,7 +10,6 @@ import logo from '../assets/{S} HARPER logo cut.jpg'
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    backgroundColor: theme.palette.primary.main,
     position: 'fixed',
   },
   holder: {
@@ -53,7 +52,7 @@ const Header = ({url}: {url: '/code' | '/physics' | '/teaching'}) => {
   }
 
   return (
-    <header className={classes.root}>
+    <AppBar className={classes.root} style={{backgroundColor: theme.palette.primary.main}}>
       <div className={classes.holder}>
         <div className={classes.logoHolder}>
           <img src={logo} alt='Sharper Logo' className={classes.logo}/>
@@ -95,7 +94,7 @@ const Header = ({url}: {url: '/code' | '/physics' | '/teaching'}) => {
             </div>
         }
       </div>
-    </header>
+    </AppBar>
   );
 };
 

@@ -1,7 +1,9 @@
 import { Theme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
-import { Typography, Card } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+import RecentWorkCard from '../components/RecentWorkCard';
+import { Link } from 'react-router-dom';
 
 export interface IRecentWorkProps {
   title: string;
@@ -9,8 +11,9 @@ export interface IRecentWorkProps {
   recentWorkItems: IRecentWork[];
 }
 
-interface IRecentWork {
+export interface IRecentWork {
   title: string;
+  briefDesc: string;
   description: string;
   links?: ILink[];
   mainImgUrl: string;
@@ -21,6 +24,7 @@ interface IRecentWork {
 export interface IImg {
   imgUrl: string;
   ariaLabel: string;
+  description: string;
 }
 
 export interface ILink {
@@ -32,45 +36,43 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     paddingTop: theme.spacing.unit * 15,
   },
-  headerContainer: {
-
-  },
   title: {
     fontFamily: 'Russo One',
     fontSize: '2rem',
     fontWeight: 300,
   },
   displayHolder: {
-    padding: `0 ${theme.spacing.unit * 20}px`,
+    padding: `0 10%`,
     display: 'flex',
-    marginTop: theme.spacing.unit * 15,
+    marginTop: theme.spacing.unit * 12,
     justifyContent: 'center',
     width: '100%',
     flexWrap: 'wrap',
   },
-  workCard: {
-    padding: theme.spacing.unit * 4,
-    margin: theme.spacing.unit * 2,
-    minWidth: '328px',
+  subheading: {
+    textDecoration: 'none',
+    color: theme.palette.primary.light,
   }
-  // min-width for tiles 327, figure out how to maintain a 3:2 ratio
 }));
 
-const RecentWork = (props: IRecentWorkProps) => {
+interface IProps extends IRecentWorkProps {
+  url: string;
+}
+
+const RecentWork = (props: IProps) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <div className={classes.headerContainer}>
-        <h1 className={classes.title}>{props.title}</h1>
-        <Typography variant='subheading'>{props.description}</Typography>
-      </div>
+      <h1 className={classes.title}>{props.title}</h1>
+      <Typography variant='subheading'>
+        {props.description} 
+        <Link to={`${props.url}#contact`} className={classes.subheading}> Email me!</Link>
+      </Typography>
       <div className={classes.displayHolder}>
         {
           props.recentWorkItems.map((workItem, i) => (
-            <Card key={i} className={classes.workCard}>
-              {workItem.title}
-            </Card>
+            <RecentWorkCard key={i} {...workItem}/>
           ))
         }
       </div>

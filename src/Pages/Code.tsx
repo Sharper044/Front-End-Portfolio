@@ -3,9 +3,10 @@ import { makeStyles } from '@material-ui/styles';
 import React from 'react';
 import Header from '../components/Header';
 import Landing from '../Sections/Landing';
-import { codeLandingData, codeIntroAndSkillsData, codeRecentWorkData } from '../data';
+import { codeLandingData, codeIntroAndSkillsData, codeRecentWorkData, codeCompaniesData } from '../data';
 import IntroAndSkills from '../Sections/IntroAndSkills';
 import RecentWork from '../Sections/RecentWork';
+import Companies from '../Sections/Companies';
 
 const useStyles = makeStyles((_theme: Theme) => ({
   root: {
@@ -20,7 +21,8 @@ const Code = () => {
       <Header url='/code'/>
       <Landing {...codeLandingData}/>
       <IntroAndSkills {...codeIntroAndSkillsData}/>
-      <RecentWork {...codeRecentWorkData}/>
+      <RecentWork url='/code' {...codeRecentWorkData}/>
+      <Companies {...codeCompaniesData}/>
     </div>
   );
 };
