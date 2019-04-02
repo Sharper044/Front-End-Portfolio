@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const Header = ({url}: {url: '/code' | '/physics' | '/teaching'}) => {
+const Header = () => {
   const classes = useStyles();
   const theme: Theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
@@ -62,9 +62,9 @@ const Header = ({url}: {url: '/code' | '/physics' | '/teaching'}) => {
             <React.Fragment>
               <MenuIcon fontSize="large" onClick={handleClick}/>
               <Menu id="simple-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose} disableAutoFocusItem={true} className={classes.menu}>
-                <Link to={`${url}#contact`} className={classes.menuItems}>
+                <a href="mailto:stuartharper044@gmail.com" className={classes.menuItems}>
                   <MenuItem >Contact Me</MenuItem>
-                </Link>
+                </a>
                 <Divider/>
                 <Link to="/code" className={classes.menuItems}>
                   <MenuItem onClick={handleClose}>Full-Stack Web Development</MenuItem>
@@ -88,9 +88,9 @@ const Header = ({url}: {url: '/code' | '/physics' | '/teaching'}) => {
               <Link to="/code" className={`${classes.menuItems} ${classes.button}`}>
                 <Button style={{color: 'white'}}>Full-Stack Web Development</Button>
               </Link>
-              <Link to={`${url}#contact`} className={`${classes.menuItems} ${classes.button}`}>
+              <a href="mailto:stuartharper044@gmail.com" className={`${classes.menuItems} ${classes.button}`}>
                 <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} >Contact Me</Button>
-              </Link>
+              </a>
             </div>
         }
       </div>

@@ -14,7 +14,7 @@ const Physics = () => {
 
   return (
     <div className={classes.root}>
-      <Header url='/physics'/>
+      <Header/>>
       Testing Render Physics
     </div>
   );

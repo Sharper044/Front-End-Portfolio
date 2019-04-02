@@ -1,6 +1,6 @@
 import { ILandingProps } from "./Sections/Landing";
 import { IIntroAndSkillsProps } from "./Sections/IntroAndSkills";
-import { IRecentWorkProps } from "./Sections/RecentWork";
+import { IRecentWorkProps, ILink } from "./Sections/RecentWork";
 import { ICompaniesProps } from "./Sections/Companies";
 import { IReferralsProps } from "./Sections/Referrals";
 
@@ -19,10 +19,18 @@ import imftLogo from './assets/imft_logo.png';
 import ktechLogo from './assets/ktech.png';
 import jacob from './assets/JacobSiebach.jpeg';
 import paul from './assets/PaulDavis.jpeg';
+import ChurchOfJesusChristLogo from './assets/ChurchOfJesusChrist.png';
+import facebookIcon from './assets/facebook.png';
+import devMountainIcon  from './assets/devmountain.logo.png';
+import emailIcon from './assets/email.png';
+import gitLabIcon from './assets/gitlab.png';
+import resumeIcon from './assets/resume.png';
+import linkedInIcon from './assets/linkedIn.png';
+import githubIcon from './assets/github.png';
 
 export const codeLandingData: ILandingProps = {
-  title: 'Code Page Title',
-  subtitle: 'Code page subtitle',
+  title: 'Full-Stack Web Developer on the Cutting Edge of Code',
+  subtitle: 'I build and code beautifully simple things, and I love what I do.',
   img1url: me,
   img1aria: 'Picture of Stuart Harper',
   img2url: computers,
@@ -88,7 +96,8 @@ export const codeRecentWorkData: IRecentWorkProps = {
       links: [
         {
           imgUrl: 'test url',
-          link: 'link url'
+          link: 'link url',
+          alt: ''
         }
       ],
       briefDesc: 'Family Story: an online immersive storytelling tool.',
@@ -108,7 +117,8 @@ export const codeRecentWorkData: IRecentWorkProps = {
       links: [
         {
           imgUrl: 'test url',
-          link: 'link url'
+          link: 'link url',
+          alt: ''
         }
       ],
       briefDesc: 'Real Estate Watchdog: an investment analysis tool.',
@@ -128,7 +138,8 @@ export const codeRecentWorkData: IRecentWorkProps = {
       links: [
         {
           imgUrl: 'test url',
-          link: 'link url'
+          link: 'link url',
+          alt: ''
         }
       ],
       briefDesc: '',
@@ -148,7 +159,8 @@ export const codeRecentWorkData: IRecentWorkProps = {
       links: [
         {
           imgUrl: 'test url',
-          link: 'link url'
+          link: 'link url',
+          alt: ''
         }
       ],
       briefDesc: '',
@@ -168,7 +180,8 @@ export const codeRecentWorkData: IRecentWorkProps = {
       links: [
         {
           imgUrl: 'test url',
-          link: 'link url'
+          link: 'link url',
+          alt: ''
         }
       ],
       briefDesc: '',
@@ -188,7 +201,8 @@ export const codeRecentWorkData: IRecentWorkProps = {
       links: [
         {
           imgUrl: 'test url',
-          link: 'link url'
+          link: 'link url',
+          alt: ''
         }
       ],
       briefDesc: '',
@@ -208,6 +222,11 @@ export const codeRecentWorkData: IRecentWorkProps = {
 export const codeCompaniesData: ICompaniesProps = {
   header: 'I am proud to have coded for the following companies:',
   companies: [
+    {
+      name: 'The Church of Jesus Christ of Latter-day Saints',
+      imgUrl: ChurchOfJesusChristLogo,
+      link: 'https://www.churchofjesuschrist.org/',
+    },
     {
       name: 'Overstock.com',
       imgUrl: overstockLogo,
@@ -267,3 +286,41 @@ export const codeReferralsData: IReferralsProps = {
     }
   ]
 };
+
+export const socialLinks: ILink[] = [
+  {
+    imgUrl: githubIcon,
+    link: 'https://github.com/Sharper044/',
+    alt: 'Github Profile',
+  },
+  {
+    imgUrl: linkedInIcon,
+    link: 'https://www.linkedin.com/in/sharper044/',
+    alt: 'LinkedIn Profile',
+  },
+  {
+    imgUrl: resumeIcon,
+    link: 'https://docs.google.com/document/d/1koUHIEwcvb6zeUyyuXvG7sEqG6y3wc6c8b2PVifcQcw/edit?usp=sharing',
+    alt: 'Resume',
+  },
+  {
+    imgUrl: gitLabIcon,
+    link: 'https://gitlab.com/Sharper044?nav_source=navbar',
+    alt: 'GitLab Profile',
+  },
+  {
+    imgUrl: devMountainIcon,
+    link: 'https://www.youracclaim.com/badges/c9590068-c12f-4c5a-b1ac-1660d861266a/public_url',
+    alt: 'DevMountain Badge',
+  },
+  {
+    imgUrl: facebookIcon,
+    link: 'https://www.facebook.com/stuart.harper.750?ref=bookmarks',
+    alt: 'Facebook Profile',
+  },
+  {
+    imgUrl: emailIcon,
+    link: 'mailto:stuartharper044@gmail.com',
+    alt: 'Email',
+  },
+];

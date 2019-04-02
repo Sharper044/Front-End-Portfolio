@@ -8,6 +8,7 @@ import IntroAndSkills from '../Sections/IntroAndSkills';
 import RecentWork from '../Sections/RecentWork';
 import Companies from '../Sections/Companies';
 import Referrals from '../Sections/Referrals';
+import Footer from '../Sections/Footer';
 
 const useStyles = makeStyles((_theme: Theme) => ({
   root: {
@@ -19,12 +20,13 @@ const Code = () => {
 
   return (
     <div className={classes.root}>
-      <Header url='/code'/>
+      <Header/>
       <Landing {...codeLandingData}/>
       <IntroAndSkills {...codeIntroAndSkillsData}/>
       <RecentWork url='/code' {...codeRecentWorkData}/>
       <Companies {...codeCompaniesData}/>
       <Referrals {...codeReferralsData}/>
+      <Footer/>
     </div>
   );
 };

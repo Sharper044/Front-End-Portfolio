@@ -23,6 +23,7 @@ export interface IReferralsProps {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     paddingTop: theme.spacing.unit * 15,
+    marginBottom: theme.spacing.unit * 15,
   },
   title: {
     fontFamily: 'Russo One',

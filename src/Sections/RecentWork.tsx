@@ -1,9 +1,11 @@
 import { Theme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
 import RecentWorkCard from '../components/RecentWorkCard';
 import { Link } from 'react-router-dom';
+import { theme } from '../styles/theme';
+import githubBlueIcon from '../assets/github.blue.png';
 
 export interface IRecentWorkProps {
   title: string;
@@ -30,6 +32,7 @@ export interface IImg {
 export interface ILink {
   imgUrl: string;
   link: string;
+  alt: string;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -44,7 +47,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   displayHolder: {
     padding: `0 10%`,
     display: 'flex',
-    marginTop: theme.spacing.unit * 12,
+    margin: `${theme.spacing.unit * 12}px 0 ${theme.spacing.unit * 6}px 0`,
     justifyContent: 'center',
     width: '100%',
     flexWrap: 'wrap',
@@ -76,6 +79,9 @@ const RecentWork = (props: IProps) => {
           ))
         }
       </div>
+      <a href='https://github.com/Sharper044/' style={{textDecoration: 'none'}}>
+        <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light,}}>See more on Github <img src={githubBlueIcon} alt="github icon" style={{width: '20px', marginLeft: '10px'}}/></Button>
+      </a>
     </div>
   );
 };

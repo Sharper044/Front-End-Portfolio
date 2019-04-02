@@ -14,7 +14,7 @@ const Teaching = () => {
 
   return (
     <div className={classes.root}>
-      <Header url='/teaching'/>
+      <Header/>
       Testing Render Teaching
     </div>
   );
