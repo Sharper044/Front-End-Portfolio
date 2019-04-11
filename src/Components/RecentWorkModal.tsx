@@ -125,7 +125,7 @@ const RecentWorkModal = (props: IProps) => {
               {
                 props.links && props.links.length > 0 &&
                 props.links.map((link) => (
-                  <a href={link.link}>
+                  <a href={link.link} key={link.alt}>
                     <img alt={`link to ${link.link}`} src={link.imgUrl} className={classes.linkImg}/>
                   </a>
                 ))

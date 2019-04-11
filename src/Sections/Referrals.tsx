@@ -102,7 +102,7 @@ const Referrals = (props: IReferralsProps) => {
             <div key={i} className={classes.slide}>
               <img src={referral.photoUrl} alt={referral.name} className={classes.image}/>
               {
-                referral.text.map(p => <Typography variant='subheading' style={{paddingBottom: '10px'}}>{p}</Typography>)
+                referral.text.map(p => <Typography key={p} variant='subheading' style={{paddingBottom: '10px'}}>{p}</Typography>)
               }
               <Typography variant='title' style={{paddingBottom: '10px', color: theme.palette.primary.light}}>{referral.name}</Typography>
               <Typography style={{paddingBottom: '10px'}}>{referral.title}, {referral.company}</Typography>

@@ -2,7 +2,7 @@ import { Theme } from '@material-ui/core/styles';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import React, { useState } from 'react';
 import { IRecentWork } from '../Sections/RecentWork';
-import { Card, CardActionArea, CardMedia, Typography, Button } from '@material-ui/core';
+import { Card, CardActionArea, CardMedia, Typography } from '@material-ui/core';
 import RecentWorkModal from './RecentWorkModal';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -76,12 +76,13 @@ const RecentWorkCard = (props: IRecentWork) => {
             <Typography variant="headline" style={{color: theme.palette.primary.contrastText}}>
               {props.briefDesc}
             </Typography>
-            <Button 
-              variant="outlined" 
-              style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} 
+            <div 
+              style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light, border: 'solid 1px', padding: '10px', borderRadius: theme.shape.borderRadius}} 
             >
-              See More
-            </Button>
+              <Typography style={{color: theme.palette.primary.light}}>
+                See More
+              </Typography> 
+            </div>
           </div>
         </CardActionArea>
       </Card>

@@ -63,7 +63,7 @@ const Footer = () => {
         <div className={classes.items}>
           {
             socialLinks.map((link: ILink) => (
-              <a href={link.link}>
+              <a href={link.link} key={link.link}>
                 <Button style={{border: `solid 1px ${theme.palette.primary.light}`, borderRadius: '50%', minWidth: 'inherit', width: '50px', height: '50px', margin: '10px'}}>
                   <img style={{width: '30px', height: 'auto'}} alt={`link to ${link.alt}`} src={link.imgUrl}/>
                 </Button>
