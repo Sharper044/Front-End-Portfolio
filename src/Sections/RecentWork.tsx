@@ -2,7 +2,7 @@ import { Theme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
 import { Typography, Button } from '@material-ui/core';
-import RecentWorkCard from '../components/RecentWorkCard';
+import RecentWorkCard from '../Components/RecentWorkCard';
 import { Link } from 'react-router-dom';
 import { theme } from '../styles/theme';
 import githubBlueIcon from '../assets/github.blue.png';

@@ -1,22 +1,22 @@
 import { Theme } from '@material-ui/core/styles';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import React from 'react';
-import Header from '../components/Header';
-import { withFormik, FormikProps } from 'formik';
-import * as Yup from 'yup';
+import React, { useRef } from 'react';
+import Header from '../Components/Header';
+import { FormikProps } from 'formik';
+// import * as Yup from 'yup';
 import { Button, TextField } from '@material-ui/core';
 
-const validationSchema = Yup.object().shape({
-  name: Yup.string()
-    .required('Please tell me your name so I can know you better.')
-    .min(2, 'Too Short.')
-    .max(60, 'Too Long.'),
-  email: Yup.string()
-    .email('Please enter a valid email so I can get back with you.')
-    .required('Please enter your email so I can get back with you.'),
-  message: Yup.string()
-    .required('Please let me know how I can help before pressing send.')
-});
+// const validationSchema = Yup.object().shape({
+//   name: Yup.string()
+//     .required('Please tell me your name so I can know you better.')
+//     .min(2, 'Too Short.')
+//     .max(60, 'Too Long.'),
+//   email: Yup.string()
+//     .email('Please enter a valid email so I can get back with you.')
+//     .required('Please enter your email so I can get back with you.'),
+//   message: Yup.string()
+//     .required('Please let me know how I can help before pressing send.')
+// });
 
 const useStyles = makeStyles((_theme: Theme) => ({
   root: {
@@ -44,15 +44,16 @@ export interface IFormValues {
 }
 
 
-const doHtmlFormPost = (values: IFormValues) => {
-  console.log(values);
-  if (formEl && formEl.current) {
-    formEl.current.submit();
-  }
-};
+// const doHtmlFormPost = (values: IFormValues) => {
+//   console.log(values);
+//   if (formEl && formEl.current) {
+//     formEl.current.submit();
+//   }
+// };
 
 const ContactMe = ({ handleBlur, handleChange, handleSubmit, values, isSubmitting }: FormikProps<IFormValues>) => {
   const classes = useStyles();
+  const formEl = useRef(null);
   const theme: Theme = useTheme();
 
   return (
@@ -105,4 +106,5 @@ const ContactMe = ({ handleBlur, handleChange, handleSubmit, values, isSubmittin
   );
 };
 
-export default withFormik({handleSubmit: doHtmlFormPost, validationSchema})(ContactMe);
+// export default withFormik({handleSubmit: doHtmlFormPost, validationSchema})(ContactMe);
+export default ContactMe;
