@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, MenuItem, Divider, Button, AppBar } from '@material-ui/core';
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Theme } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu'
 import { makeStyles, useTheme } from '@material-ui/styles';
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: '-10px',
   },
   button: {
-    padding: theme.spacing.unit,
+    padding: theme.spacing(),
   },
   logoHolder: {
     width: '300px'
@@ -67,26 +67,20 @@ const Header = () => {
                 </a>
                 <Divider/>
                 <Link to="/code" className={classes.menuItems}>
-                  <MenuItem onClick={handleClose}>Full-Stack Web Development</MenuItem>
+                  <MenuItem onClick={handleClose}>Home</MenuItem>
                 </Link>
-                <Link to="/physics" className={classes.menuItems}>
-                  <MenuItem onClick={handleClose}>Physics, Astronomy & Engineering</MenuItem>
-                </Link>
-                <Link to="/teaching" className={classes.menuItems}>
-                  <MenuItem onClick={handleClose}>Teaching</MenuItem>
+                <Link to="/blog" className={classes.menuItems}>
+                  <MenuItem onClick={handleClose}>Blog</MenuItem>
                 </Link>
               </Menu>
             </React.Fragment>
           :
             <div>
-              <Link to="/teaching" className={`${classes.menuItems} ${classes.button}`}>
-                <Button style={{color: 'white'}}>Teaching</Button>
-              </Link>
-              <Link to="/physics" className={`${classes.menuItems} ${classes.button}`}>
-                <Button style={{color: 'white'}}>Physics, Astronomy & Engineering</Button>
-              </Link>
               <Link to="/code" className={`${classes.menuItems} ${classes.button}`}>
-                <Button style={{color: 'white'}}>Full-Stack Web Development</Button>
+                <Button style={{color: 'white'}}>Home</Button>
+              </Link>
+              <Link to="/blog" className={`${classes.menuItems} ${classes.button}`}>
+                <Button style={{color: 'white'}}>Blog</Button>
               </Link>
               <a href="mailto:stuartharper044@gmail.com" className={`${classes.menuItems} ${classes.button}`}>
                 <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} >Contact Me</Button>

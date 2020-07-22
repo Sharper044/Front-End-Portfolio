@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	  alignItems: 'center',
     margin: '0 auto',
     backgroundColor: theme.palette.primary.light,
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     borderRadius: theme.shape.borderRadius,
   },
   bottom: {
@@ -50,7 +50,7 @@ const Footer = () => {
       <div className={classes.holder}>
         <div className={classes.top}>
           <h1 className={classes.title}>Start a project</h1>
-          <Typography style={{color: 'white',}} variant='subheading'>Interested in working together? I would love to talk with you.</Typography>
+          <Typography style={{color: 'white',}} variant='subtitle1'>Interested in working together? I would love to talk with you.</Typography>
           <a href='mailto:stuartharper044@gmail.com' style={{textDecoration: 'none'}}>
             <Button variant='outlined' style={{color: 'white', borderColor: theme.palette.primary.dark}}>Let's do this</Button>
           </a>
@@ -59,7 +59,7 @@ const Footer = () => {
       <div className={classes.buffer}/>
       <div className={classes.bottom}>
         <img alt="Stuart Harper Logo" src={logo} className={classes.items}/>
-        <Typography variant='subheading' style={{color: 'white', fontStyle: 'italic'}} className={classes.items}>"Life is good, so long as we live in a manner to make it so..."</Typography>
+        <Typography variant='subtitle1' style={{color: 'white', fontStyle: 'italic'}} className={classes.items}>"Life is good, so long as we live in a manner to make it so..."</Typography>
         <div className={classes.items}>
           {
             socialLinks.map((link: ILink) => (

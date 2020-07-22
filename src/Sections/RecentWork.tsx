@@ -37,7 +37,7 @@ export interface ILink {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    paddingTop: theme.spacing.unit * 15,
+    paddingTop: theme.spacing(15),
   },
   title: {
     fontFamily: 'Russo One',
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   displayHolder: {
     padding: `0 10%`,
     display: 'flex',
-    margin: `${theme.spacing.unit * 12}px 0 ${theme.spacing.unit * 6}px 0`,
+    margin: `${theme.spacing(12)}px 0 ${theme.spacing(6)}px 0`,
     justifyContent: 'center',
     width: '100%',
     flexWrap: 'wrap',
@@ -68,7 +68,7 @@ const RecentWork = (props: IProps) => {
   return (
     <div className={classes.root}>
       <h1 className={classes.title}>{props.title}</h1>
-      <Typography variant='subheading'>
+      <Typography variant='subtitle1'>
         {props.description} 
         <Link to={`${props.url}#contact`} className={classes.subheading}> Email me!</Link>
       </Typography>

@@ -7,7 +7,7 @@ import RecentWorkModal from './RecentWorkModal';
 
 const useStyles = makeStyles((theme: Theme) => ({
   workCard: {
-    margin: theme.spacing.unit * 2,
+    margin: theme.spacing(2),
     width: '328px',
     height: '220px',
   },
@@ -73,7 +73,7 @@ const RecentWorkCard = (props: IRecentWork) => {
             className={classes.media}
           />
           <div className={`${classes.description} ${hover ? classes.show : classes.hide}`}>
-            <Typography variant="headline" style={{color: theme.palette.primary.contrastText}}>
+            <Typography variant="h5" style={{color: theme.palette.primary.contrastText}}>
               {props.briefDesc}
             </Typography>
             <div 

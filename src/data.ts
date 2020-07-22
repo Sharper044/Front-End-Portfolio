@@ -7,14 +7,19 @@ import { IReferralsProps } from "./Sections/Referrals";
 import computers from './assets/Computer graphic.png';
 import me from './assets/0.jpeg';
 import frontendIcon from './assets/frontend.png';
+import reactLogo from './assets/reactLogo.png';
 import backendIcon from './assets/backend.png';
+import nodejsLogo from './assets/nodejsLogo.png';
 import miscIcon from './assets/Misc icon_ .jpg';
+import teamsLogo from './assets/teamsLogo.jpeg';
 import familyStoryMain from './assets/landing.png';
 import rewMain from './assets/REW_homepage.jpg';
+import pdsLogo from './assets/PDSLogo-1.jpg';
 import overstockLogo from './assets/overstock.png';
 import tcnLogo from './assets/TCN.png';
 import byuLogo from './assets/BYU.png';
 import devMtnLogo from './assets/devmountain.logo.words.png';
+import afrlLogo from './assets/AFRL.jpeg';
 import imftLogo from './assets/imft_logo.png';
 import ktechLogo from './assets/ktech.png';
 import jacob from './assets/JacobSiebach.jpeg';
@@ -32,55 +37,141 @@ export const codeLandingData: ILandingProps = {
   title: 'Full-Stack Web Developer on the Cutting Edge of Code',
   subtitle: 'I build and code beautifully simple things, and I love what I do.',
   img1url: me,
-  img1aria: 'Picture of Stuart Harper',
+  img1aria: 'Stuart Harper',
   img2url: computers,
-  img2aria: 'Cool picture of coding'
+  img2aria: 'coding in multiple accessible formats'
 }
 
 export const codeIntroAndSkillsData: IIntroAndSkillsProps = {
-  title: 'This is a test intro',
-  text: 'Lorem ipsum dolor sit amet, dico assentior vix ei. An habemus apeirian hendrerit vis. Ei gloriatur inciderint est, posse definitionem cu sed. Augue omnium cu vim. Cu solum possit mea, te integre minimum mel, ea quo meis fastidii. \nNo eum elit nusquam perpetua, cu nec sale eirmod. Ad rebum saepe laoreet mei, labore eirmod efficiantur mei at, ex quo autem timeam maluisset. Sit eu dicant altera, partem adolescens mea te, id lorem vocibus pro. Ne pri agam doctus nostrum. Id dicant vidisse maiestatis pro, tamquam docendi reformidans in nam. Ea pri sumo nominavi vituperata.',
+  title: 'Applying the tools of advanced physics and engineering to building websites.',
+  text: 'Thank you for visiting my website. I have been working for the last fifteen years to understand and perfect my craft, and to apply all the skills I have gained along the way. I work to serve others desiring to connect online, whether it be for business or to serve those in need. I started as a physicist, and learned there how to research, learn, implement advanced concepts, and then share those concepts in relatable terms. From there I went into engineering, where I learned that care and craftsmanship can make the difference between a usable product and a great one. And now, I have brought it all together in coding, and I have never been happier. Below is just a sample of some of my skills and projects for you to see.',
   skillSetArr: [
     {
       imgUrl: frontendIcon,
-      imgAria: 'test 1',
-      title: 'test 1',
-      description: 'test 1',
-      mainSkillDesc: 'test 1',
-      mainSkillText: 'test 1',
-      toolsDesc: 'test 1',
+      imgAria: 'Front-End',
+      title: 'Front-End',
+      description: 'As a front-end developer I seek to make a beautiful and effective user interface. My main tool of choice is',
+      mainSkillLogo: reactLogo,
+      mainSkillDesc: 'React.JS',
+
+      mainSkillText: 'I have been coding with React since 2018, and I have found it to be a flexible and versatile tool to create websites.',
+      toolsDesc: 'I am also proficient in the following tools:',
       toolsArr: [
-        '1',
-        '2',
-        '3',
+        'CSS',
+        'HTML',
+        'JavaScript ES9',
+        'JSX',
+        'TSX',
+        'TypeScript',
+        '-',
+        'Accessability Training',
+        'Angular',
+        'Axios',
+        'Babble',
+        'Chart.js',
+        'Formik',
+        'I18n Training',
+        'Lodash',
+        'NPM',
+        'Node Modules',
+        'React Hooks',
+        'React-Router',
+        'Redux',
+        'Redux-Promise-Middleware',
+        'Redux Sagas',
+        'Storybook',
+        'Vue',
+        'Webpack',
+        'Yarn',
+        'Yup',
+        '-',
+        'Abstract',
+        'CSS-Grid',
+        'Flexbox',
+        'Material-UI',
+        'PostCss',
+        'Styled Components',
       ],
     },
     {
       imgUrl: backendIcon,
-      imgAria: 'test 2',
-      title: 'test 2',
-      description: 'test 2',
-      mainSkillDesc: 'test 2',
-      mainSkillText: 'test 2',
-      toolsDesc: 'test 2',
+      imgAria: 'Back-End',
+      title: 'Back-End',
+      description: 'My goal in writing back-end code is to make a clean and secure api with efficient data handling. I am most proficient in',
+      mainSkillLogo: nodejsLogo,
+      mainSkillDesc: 'Node.JS',
+      mainSkillText: 'Though I can handle the mental load of switching languages and syntax, I find my work to be accelerated by having everything in one language.',
+      toolsDesc: 'In addition to this I have the following skills at my disposal:',
       toolsArr: [
-        '1',
-        '2',
-        '3',
+        'C++',
+        'Deno',
+        'Go',
+        'Java Springboot',
+        'LabView',
+        'MatLab',
+        'Mathmatica',
+        'mySQL',
+        'PostgreSQL',
+        'SQL Tabs',
+        '-',
+        'APIs',
+        'AWS Gateway API',
+        'AWS Lambda',
+        'AWS Cloudwatch',
+        'Google API',
+        'Heroku Databases',
+        'Postman',
+        'Sharepoint API',
+        'Workday API',
+        'Zillow API',
+        '-',
+        'Auth0',
+        'Bazel',
+        'Digital Ocean',
+        'Docker',
+        'Express.Js',
+        'Next.Js',
+        'Google Protobuffs',
+        'GPRC',
+        'Massive',
+        'NodeMailer',
+        'OAuth',
       ],
     },
     {
       imgUrl: miscIcon,
-      imgAria: 'Test 3',
-      title: 'Test 3',
-      description: 'Test 3',
-      mainSkillDesc: 'Test 3',
-      mainSkillText: 'Test 3',
-      toolsDesc: 'Test 3',
+      imgAria: 'Additional Skills',
+      title: 'Additional Skills',
+      description: `As a software engineer there are many different skills needed to get the job done. One of my favorites is`,
+      mainSkillLogo: teamsLogo,
+      mainSkillDesc: 'Microsoft Teams',
+      mainSkillText: 'Being a remote developer, I rely on Teams to stay connected. It is my favorite collaboration tool at this time due to its ease of use and streamlined integration with outlook.',
+      toolsDesc: 'Here are some of my other misc skills',
       toolsArr: [
-        '1',
-        '2',
-        '3',
+        'Asana',
+        'Azure',
+        'Azure Active Directory',
+        'Azure Devops',
+        'Bitbucket',
+        'Jira',
+        'GitLab',
+        'Git',
+        'Github',
+        'VS Code',
+        '-',
+        'Discord',
+        'Microsoft Office',
+        'Slack',
+        'VS Code Liveshare',
+        'Webex',
+        'Yammer',
+        'Zoom',
+        '-',
+        'Running Code Reviews',
+        'Running Meetings',
+        'Teaching/Mentoring',
+        'plus...',
+        'an abundance of other interpersonal soft skills.'
       ],
     },
   ]
@@ -228,6 +319,11 @@ export const codeCompaniesData: ICompaniesProps = {
       link: 'https://www.churchofjesuschrist.org/',
     },
     {
+      name: 'PDS - People, Data and Solutions',
+      imgUrl: pdsLogo,
+      link: 'https://www.pdsinc.com/',
+    },
+    {
       name: 'Overstock.com',
       imgUrl: overstockLogo,
       link: 'https://www.overstock.com/',
@@ -256,6 +352,11 @@ export const codeCompaniesData: ICompaniesProps = {
       name: 'KTech Engineering',
       imgUrl: ktechLogo,
       link: 'http://ktech-eng.com/',
+    },
+    {
+      name: 'Kirtland Air Force Base Space Vehicles Directorate',
+      imgUrl: afrlLogo,
+      link: 'https://www.kirtland.af.mil/Units/AFRL-Space-Vehicles-Directorate/',
     }
   ]
 };

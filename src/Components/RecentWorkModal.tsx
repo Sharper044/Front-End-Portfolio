@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
   },
   modalCard: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     display: 'flex'
   },
   figure: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   aside: {
     width: '400px',
-    marginRight: theme.spacing.unit * 2,
+    marginRight: theme.spacing(2),
   },
   linkImg: {
     width: '25px',
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   linkHolder: {
     display: 'flex',
-    margin: `${theme.spacing.unit * 2}px 0`
+    margin: `${theme.spacing(2)}px 0`
   },
 }));
 
@@ -131,7 +131,7 @@ const RecentWorkModal = (props: IProps) => {
                 ))
               }
             </div>
-            <Typography variant="subheading">{props.description}</Typography>
+            <Typography variant="subtitle1">{props.description}</Typography>
           </aside>
         </Card>
       </Modal>

@@ -53,7 +53,7 @@ const Landing = (props: ILandingProps) => {
   return (
     <div className={classes.root}>
       <h1 className={classes.title}>{props.title}</h1>
-      <Typography variant='headline'>{props.subtitle}</Typography>
+      <Typography variant='h5'>{props.subtitle}</Typography>
       <div className={`${classes.imgContainer} ${classes.img1Container}`}>
         <img alt={props.img1aria} src={props.img1url} className={`${classes.img} ${classes.img1}`}/>
       </div>

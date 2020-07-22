@@ -22,8 +22,8 @@ export interface IReferralsProps {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    paddingTop: theme.spacing.unit * 15,
-    marginBottom: theme.spacing.unit * 15,
+    paddingTop: theme.spacing(15),
+    marginBottom: theme.spacing(15),
   },
   title: {
     fontFamily: 'Russo One',
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   displayHolder: {
     margin: '0 auto',
-    marginTop: theme.spacing.unit * 12,
+    marginTop: theme.spacing(12),
     width: '60%',
     flexGrow: 1,
   },
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     height: 50,
-    paddingLeft: theme.spacing.unit * 4,
+    paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
   stepper: {
@@ -89,7 +89,7 @@ const Referrals = (props: IReferralsProps) => {
   return (
     <div className={classes.root}>
       <h1 className={classes.title}>{props.title}</h1>
-      <Typography variant='subheading'>{props.subtitle}</Typography>
+      <Typography variant='subtitle1'>{props.subtitle}</Typography>
       <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -102,9 +102,9 @@ const Referrals = (props: IReferralsProps) => {
             <div key={i} className={classes.slide}>
               <img src={referral.photoUrl} alt={referral.name} className={classes.image}/>
               {
-                referral.text.map(p => <Typography key={p} variant='subheading' style={{paddingBottom: '10px'}}>{p}</Typography>)
+                referral.text.map(p => <Typography key={p} variant='subtitle1' style={{paddingBottom: '10px'}}>{p}</Typography>)
               }
-              <Typography variant='title' style={{paddingBottom: '10px', color: theme.palette.primary.light}}>{referral.name}</Typography>
+              <Typography variant='h6' style={{paddingBottom: '10px', color: theme.palette.primary.light}}>{referral.name}</Typography>
               <Typography style={{paddingBottom: '10px'}}>{referral.title}, {referral.company}</Typography>
             </div>
           ))

@@ -4,8 +4,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { theme } from './styles/theme';
 import Code from './Pages/Code';
-import Physics from './Pages/Physics';
-import Teaching from './Pages/Teaching';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -23,9 +21,8 @@ const App = () => {
       <div className={classes.root}>
         <Router>
           <Route path="/" exact component={Code}/>
-          <Route path="/code" component={Code}/>
-          <Route path="/physics" component={Physics}/>
-          <Route path="/teaching" component={Teaching}/>
+          {/* <Route path="/blog" component={Blog}/>
+          <Route path="/contact-me" component={ContactMe}/>*/}
         </Router>
       </div>
     </ThemeProvider>
