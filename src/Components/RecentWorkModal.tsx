@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex'
   },
   figure: {
+    width: '500px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -124,9 +125,11 @@ const RecentWorkModal = (props: IProps) => {
             <div className={classes.linkHolder}>
               {
                 props.links && props.links.length > 0 &&
-                props.links.map((link) => (
+                props.links.map(({Icon, ...link}) => (
                   <a href={link.link} key={link.alt}>
-                    <img alt={`link to ${link.link}`} src={link.imgUrl} className={classes.linkImg}/>
+                    {
+                      Icon ? (<Icon style={{color: theme.palette.primary.light}}/>) : <img alt={`link to ${link.link}`} src={link.imgUrl} className={classes.linkImg}/>
+                    }
                   </a>
                 ))
               }

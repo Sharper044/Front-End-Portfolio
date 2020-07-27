@@ -3,6 +3,7 @@ import { makeStyles, ThemeProvider } from '@material-ui/styles';
 import React from 'react';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { theme } from './styles/theme';
+import Blog from './Pages/Blog';
 import Code from './Pages/Code';
 
 const useStyles = makeStyles(() => ({
@@ -21,8 +22,8 @@ const App = () => {
       <div className={classes.root}>
         <Router>
           <Route path="/" exact component={Code}/>
-          {/* <Route path="/blog" component={Blog}/>
-          <Route path="/contact-me" component={ContactMe}/>*/}
+          <Route path="/blog" component={Blog}/>
+          {/*<Route path="/contact-me" component={ContactMe}/>*/}
         </Router>
       </div>
     </ThemeProvider>

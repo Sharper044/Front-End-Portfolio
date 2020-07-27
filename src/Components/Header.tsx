@@ -76,7 +76,7 @@ const Header = () => {
             </React.Fragment>
           :
             <div>
-              <Link to="/code" className={`${classes.menuItems} ${classes.button}`}>
+              <Link to="/" className={`${classes.menuItems} ${classes.button}`}>
                 <Button style={{color: 'white'}}>Home</Button>
               </Link>
               <Link to="/blog" className={`${classes.menuItems} ${classes.button}`}>

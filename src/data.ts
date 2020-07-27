@@ -3,6 +3,9 @@ import { IIntroAndSkillsProps } from "./Sections/IntroAndSkills";
 import { IRecentWorkProps, ILink } from "./Sections/RecentWork";
 import { ICompaniesProps } from "./Sections/Companies";
 import { IReferralsProps } from "./Sections/Referrals";
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import WebIcon from '@material-ui/icons/Web';
 
 import computers from './assets/Computer graphic.png';
 import me from './assets/0.jpeg';
@@ -13,7 +16,24 @@ import nodejsLogo from './assets/nodejsLogo.png';
 import miscIcon from './assets/Misc icon_ .jpg';
 import teamsLogo from './assets/teamsLogo.jpeg';
 import familyStoryMain from './assets/landing.png';
+import fs1 from './assets/FS1.png';
+import fs2 from './assets/Story view 1.png';
+import fs3 from './assets/Story view 2.png';
 import rewMain from './assets/REW_homepage.jpg';
+import rew1 from './assets/REW_homepage_full.jpg';
+import rew2 from './assets/REW_About.jpg';
+import rew3 from './assets/REW_Newsearch.jpg';
+import rew4 from './assets/REW_Saved.jpg';
+import rew5 from './assets/REW_Results1.jpg';
+import rew6 from './assets/REW_Results2.jpg';
+import rew7 from './assets/REW_Email.jpg';
+import thesis1 from './assets/DM3 Static Test.jpg';
+import thesis2 from './assets/Nonlinear_Demo.jpg';
+import thesis4 from './assets/Thesis_Map.jpg';
+import thesis5 from './assets/thesis_pdf.jpg';
+import thesis6 from './assets/thesis_pdf2.jpg';
+import thesis7 from './assets/thesis_PDF3.jpg';
+import thesis8 from './assets/ASA_Article.jpg';
 import pdsLogo from './assets/PDSLogo-1.jpg';
 import overstockLogo from './assets/overstock.png';
 import tcnLogo from './assets/TCN.png';
@@ -69,8 +89,12 @@ export const codeIntroAndSkillsData: IIntroAndSkillsProps = {
         'Axios',
         'Babble',
         'Chart.js',
+        'Cypress IO',
         'Formik',
+        'History',
         'I18n Training',
+        'Jasmine',
+        'Jest',
         'Lodash',
         'NPM',
         'Node Modules',
@@ -89,6 +113,7 @@ export const codeIntroAndSkillsData: IIntroAndSkillsProps = {
         'CSS-Grid',
         'Flexbox',
         'Material-UI',
+        'MDBootstrap',
         'PostCss',
         'Styled Components',
       ],
@@ -114,10 +139,11 @@ export const codeIntroAndSkillsData: IIntroAndSkillsProps = {
         'PostgreSQL',
         'SQL Tabs',
         '-',
-        'APIs',
+        'RESTful APIs',
         'AWS Gateway API',
         'AWS Lambda',
         'AWS Cloudwatch',
+        'Firebase',
         'Google API',
         'Heroku Databases',
         'Postman',
@@ -149,11 +175,13 @@ export const codeIntroAndSkillsData: IIntroAndSkillsProps = {
       toolsDesc: 'Here are some of my other misc skills',
       toolsArr: [
         'Asana',
+        'AutoCad',
         'Azure',
         'Azure Active Directory',
         'Azure Devops',
         'Bitbucket',
         'Jira',
+        'Fusion 360',
         'GitLab',
         'Git',
         'Github',
@@ -182,13 +210,20 @@ export const codeRecentWorkData: IRecentWorkProps = {
   description: 'Here are some of my recent coding projects. Want to see more?',
   recentWorkItems: [
     {
-      title: 'project 1',
-      description: 'project 1 desc',
+      title: 'Family Story',
+      description: 'Group Project - Role: Project Lead & Backend Team Lead, Built March 2018, The purpose of Family Story is to let users build and create immersive family story experiences. It does this by having a person import dates, events, photos, audio, and locations into a story and the events that are in that story.',
       links: [
         {
-          imgUrl: 'test url',
-          link: 'link url',
-          alt: ''
+          imgUrl: '',
+          Icon: WebIcon,
+          link: 'http://www.family-story.online/',
+          alt: 'Website'
+        },
+        {
+          imgUrl: '',
+          Icon: GitHubIcon,
+          link: 'https://github.com/family-story/family-story',
+          alt: 'GitHub'
         }
       ],
       briefDesc: 'Family Story: an online immersive storytelling tool.',
@@ -197,19 +232,41 @@ export const codeRecentWorkData: IRecentWorkProps = {
       images: [
         {
           imgUrl: familyStoryMain,
-          ariaLabel: 'img 1 aria label',
-          description: 'desc'
+          ariaLabel: 'Landing Page',
+          description: 'Landing Page - Users here are prompted to log in so they can create their stories.'
+        },
+        {
+          imgUrl: fs1,
+          ariaLabel: 'Home Page for Family Story',
+          description: 'Home Page for Family Story - Here users can select which stories they want to view, as well as add or edit stories.'
+        },
+        {
+          imgUrl: fs2,
+          ariaLabel: 'Story View',
+          description: 'Story View - The site then walks the users through each event of the story, showing them when/where they happened and letting them experience it.'
+        },
+        {
+          imgUrl: fs3,
+          ariaLabel: 'Story View Continued',
+          description: 'Story View Continued - You can even view pictures or hear audio concerning each event.'
         }
       ],
     },
     {
-      title: 'project 2',
-      description: 'project 2 desc',
+      title: 'REAL ESTATE WATCHDOG',
+      description: "Built February 2018, the purpose of Real Estate Watchdog is to provide a tool to real estate investors/agents to alert them to the best investment properties currently on the market. It watches the market, so you don't have to. Major technologies and languages include: Javascript, HTML, CSS, React/JSX, Redux, Auth0 , Chart.JS, Cron, Zillow API, Express.JS, mySQL, Axios, Massive, React-Router, Redux-Promise-Middleware, NodeMailer, and Digital Ocean",
       links: [
         {
-          imgUrl: 'test url',
-          link: 'link url',
-          alt: ''
+          imgUrl: '',
+          Icon: WebIcon,
+          link: 'http://www.realestate-watchdog.com',
+          alt: 'Website'
+        },
+        {
+          imgUrl: '',
+          Icon: GitHubIcon,
+          link: 'https://github.com/Sharper044/RealEstateWatchdog',
+          alt: 'GitHub'
         }
       ],
       briefDesc: 'Real Estate Watchdog: an investment analysis tool.',
@@ -217,31 +274,98 @@ export const codeRecentWorkData: IRecentWorkProps = {
       ariaLabel: 'realestate-watchdog.com',
       images: [
         {
-          imgUrl: 'img 2 url',
-          ariaLabel: 'img 2 aria label',
-          description: 'desc'
+          imgUrl: rew1,
+          ariaLabel: 'REW Homepage',
+          description: 'REW Homepage - Here the user enters the site and signs in.'
+        },
+        {
+          imgUrl: rew2,
+          ariaLabel: 'REW About Page',
+          description: 'REW About Page - This about page describes the site, and prompts the user to create a new search. There is also a responsive nav bar along the top.'
+        },
+        {
+          imgUrl: rew3,
+          ariaLabel: 'REW New Search',
+          description: 'REW New Search - Here, new searches can be created, and saved searches viewed, edited, and deleted. The search takes in the following parameters: location, cash amount for purchase, whether the home will be purchased in cash or a loan, and if there is a loan, are you planning on moving in first, as well as the interest rate.'
+        },
+        {
+          imgUrl: rew4,
+          ariaLabel: 'REW Saved Search List',
+          description: 'REW Saved Search List - The user can select to have this search ran automatically every two weeks and have the results emailed to them. The user can also save the search to be used at a future time.'
+        },
+        {
+          imgUrl: rew5,
+          ariaLabel: 'REW Results View 1',
+          description: 'REW Results View 1 - The search runs by first pinging a database of homes for sale, and filters out the ones the user cannot afford.'
+        },
+        {
+          imgUrl: rew6,
+          ariaLabel: 'REW Results View 2',
+          description: 'REW Results View 2 - Individual properties can then be clicked to see more details or even to see the property itself on Zillow.'
+        },
+        {
+          imgUrl: rew7,
+          ariaLabel: 'REW Email',
+          description: 'REW Email - The user can request to have the data sent to them in an email and also to receive automatic, bi-weekly emails.'
         }
       ],
     },
     {
-      title: 'project 3',
-      description: 'project 3 desc',
+      title: 'Statistical Analysis of Noise From Solid Rocket Motors-MatLab December 2012',
+      description: 'BYU Physics Senior Thesis - Programmed in MatLab. It is a statistical analysis of noise data from various-sized solid propellant rocket motors (0.13m to 1.22m). Non-Gaussian features of the data were explored by calculating probability density functions (PDF) of the data, standard deviation, skewness, and kurtosis. This was the first time this type of analysis was done for both the pressure waveform and its time derivative. This revealed the formation of acoustic shocks within the noise. Presented these results at the Acoustical Society of America.',
       links: [
         {
-          imgUrl: 'test url',
-          link: 'link url',
-          alt: ''
+          imgUrl: '',
+          Icon: DescriptionOutlinedIcon,
+          link: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.724.4868&rep=rep1&type=pdf&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B8ruR5oo3Tzq82Pzut86LgA%3D%3D',
+          alt: 'Thesis'
+        },
+        {
+          imgUrl: '',
+          Icon: DescriptionOutlinedIcon,
+          link: 'http://asa.scitation.org/doi/10.1121/1.3655009?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B8ruR5oo3Tzq82Pzut86LgA%3D%3D',
+          alt: 'ASA Citation'
         }
       ],
-      briefDesc: '',
-      mainImgUrl: 'img url',
-      ariaLabel: 'img label',
+      briefDesc: 'Statistical Analysis of Rocket Noise Program',
+      mainImgUrl: thesis1,
+      ariaLabel: 'Statistical Analysis of Rocket Noise',
       images: [
         {
-          imgUrl: 'img 3 url',
-          ariaLabel: 'img 3 aria label',
-          description: 'desc'
-        }
+          imgUrl: thesis1,
+          ariaLabel: 'Rocket test at ATK in Utah',
+          description: 'Rocket test at ATK in Utah - Several rocket tests like this one were performed to better understand the damage caused to rockets by acoustic "crackle".'
+        },
+        {
+          imgUrl: thesis2,
+          ariaLabel: 'Nonlinear Acoustic Propagation - a wave turning from smooth to more like a sawtooth',
+          description: 'Nonlinear Acoustic Propagation - Extremely loud sound waves change shape as they progress due to temperature changes in the wave, making standard analysis impossible.'
+        },
+        {
+          imgUrl: thesis4,
+          ariaLabel: 'Normalized map of the microphones',
+          description: 'Normalized map of the microphones - A standardized comparison of all microphones in this experiment.'
+        },
+        {
+          imgUrl: thesis5,
+          ariaLabel: 'Acoustic PDF created in MatLab',
+          description: 'Acoustic PDF created in MatLab - This basically showed the range of loudness in the noise.'
+        },
+        {
+          imgUrl: thesis6,
+          ariaLabel: 'Normalized rocket comparison',
+          description: 'Normalized rocket comparison - Not much difference can be seen in this between the different rockets using the standard method.'
+        },
+        {
+          imgUrl: thesis7,
+          ariaLabel: 'Derivative comparison',
+          description: 'Derivative comparison - but by seeing how rapidly the loudness in the noise could change we were able to see the presence of the shockwaves, seen in the black areas on the right of the first two rockets. This also happened to be the two largest rockets in the test.'
+        },
+        {
+          imgUrl: thesis8,
+          ariaLabel: 'ASA Article',
+          description: 'ASA Article - This is my citation from when I presented at the ASA conference in the rocket noise session.'
+        },
       ],
     },
     {
