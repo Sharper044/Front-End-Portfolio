@@ -54,8 +54,8 @@ const SkillSet = ({skillSet, isEnd}: {skillSet: ISkillSet, isEnd: boolean}) => {
             <Typography>{skillSet.mainSkillText}</Typography>
             <Typography className={classes.skillSubtitle} style={{marginTop: theme.spacing(3), marginBottom: theme.spacing(1)}}>{skillSet.toolsDesc}</Typography>
             {
-            skillSet.toolsArr.map(tool => (
-                <Typography key={tool}>{tool}</Typography>
+            skillSet.toolsArr.map((tool, i) => (
+                <Typography key={tool + i}>{tool}</Typography>
             ))
             }
         </div>

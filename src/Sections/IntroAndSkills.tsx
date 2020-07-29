@@ -105,7 +105,7 @@ const IntroAndSkills = (props: IIntroAndSkillsProps) => {
         <Card className={useMediaQuery(theme.breakpoints.up('md'))? classes.card : `${classes.card} ${classes.cardSmall}`}>
         {
           props.skillSetArr.map((skillSet, i) => (
-            <SkillSet skillSet={skillSet} isEnd={i < props.skillSetArr.length - 1}/>
+            <SkillSet skillSet={skillSet} key={skillSet.title} isEnd={i < props.skillSetArr.length - 1}/>
             ))
           }
         </Card>

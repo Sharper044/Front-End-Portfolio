@@ -34,6 +34,16 @@ import thesis5 from './assets/thesis_pdf.jpg';
 import thesis6 from './assets/thesis_pdf2.jpg';
 import thesis7 from './assets/thesis_PDF3.jpg';
 import thesis8 from './assets/ASA_Article.jpg';
+import c51 from './assets/20170627_165306.jpg';
+import c52 from './assets/20170830_105950 (1).jpg';
+import c53 from './assets/20170830_132133.jpg';
+import laser1 from './assets/1914409_1150872524529_5365494_n.jpg';
+import laser2 from './assets/1914409_1150872564530_3883785_n.jpg';
+import laser3 from './assets/5045_1100316020648_1190664_n.jpg';
+import laser4 from './assets/5045_1100315940646_63739_n.jpg';
+import laser5 from './assets/5045_1100315980647_1561044_n.jpg';
+import laser6 from './assets/5045_1100316060649_3343577_n.jpg';
+import laser7 from './assets/logo-aps-sm.gif';
 import pdsLogo from './assets/PDSLogo-1.jpg';
 import overstockLogo from './assets/overstock.png';
 import tcnLogo from './assets/TCN.png';
@@ -209,6 +219,27 @@ export const codeRecentWorkData: IRecentWorkProps = {
   title: 'My Recent Work',
   description: 'Here are some of my recent coding projects. Want to see more?',
   recentWorkItems: [
+    // {
+    //   title: 'project 1',
+    //   description: 'project 1 desc',
+    //   links: [
+    //     {
+    //       imgUrl: 'test url',
+    //       link: 'link url',
+    //       alt: ''
+    //     }
+    //   ],
+    //   briefDesc: '',
+    //   mainImgUrl: 'img url',
+    //   ariaLabel: 'img label',
+    //   images: [
+    //     {
+    //       imgUrl: 'img 1 url',
+    //       ariaLabel: 'img 1 aria label',
+    //       description: 'desc'
+    //     }
+    //   ],
+    // },
     {
       title: 'Family Story',
       description: 'Group Project - Role: Project Lead & Backend Team Lead, Built March 2018, The purpose of Family Story is to let users build and create immersive family story experiences. It does this by having a person import dates, events, photos, audio, and locations into a story and the events that are in that story.',
@@ -369,68 +400,75 @@ export const codeRecentWorkData: IRecentWorkProps = {
       ],
     },
     {
-      title: 'project 4',
-      description: 'project 4 desc',
-      links: [
-        {
-          imgUrl: 'test url',
-          link: 'link url',
-          alt: ''
-        }
-      ],
-      briefDesc: '',
-      mainImgUrl: 'img url',
-      ariaLabel: 'img label',
+      title: 'C-5 Solenoid Valve',
+      description: 'Built September 2017. While working at Ktech Engineering, I helped with the design, sourcing, production, testing, and quality assurance for these valves. We eventually produced 4 prototypes and 32 production units. These were drafted in Fusion 360. I also programmed the wire spoolers and the CNC Mills and Lathes to build these.',
+      links: [],
+      briefDesc: 'C-5 Solenoid Valve',
+      mainImgUrl: c51,
+      ariaLabel: 'C-5 Solenoid Valve',
       images: [
         {
-          imgUrl: 'img 4 url',
-          ariaLabel: 'img 4 aria label',
-          description: 'desc'
-        }
+          imgUrl: c51,
+          ariaLabel: 'The finished product',
+          description: 'The finished product - This is the completed C-5 solenoid valve. These will eventually be used for releasing hydraulic fluid for the landing gear.'
+        },
+        {
+          imgUrl: c52,
+          ariaLabel: 'Solenoid windings curing',
+          description: 'Solenoid windings curing - These were our first prototypes after being wound, varnished, encased, and potted. Here they are curing in our high-temp oven.'
+        },
+        {
+          imgUrl: c53,
+          ariaLabel: 'Celebrating after our first success',
+          description: 'Celebrating after our first success - These two prototypes were our first to pass all electromagnetic quality tests.'
+        },
       ],
     },
     {
-      title: 'project 1',
-      description: 'project 1 desc',
-      links: [
-        {
-          imgUrl: 'test url',
-          link: 'link url',
-          alt: ''
-        }
-      ],
-      briefDesc: '',
-      mainImgUrl: 'img url',
-      ariaLabel: 'img label',
+      title: 'Strontium laser locking vapor cell',
+      description: 'A Laser Lock System using Multiple Overlapping Beams Built August 2010 - We built a system where strontium vapor could be trapped and ionized with lasers, and a system to tune those lasers to the needed frequencies. This is done by overlapping beams to optically pump the atoms into the necessary states. This was presented at a conference of the American Physical Society.',
+      links: [],
+      briefDesc: 'Strontium laser locking vapor cell',
+      mainImgUrl: laser1,
+      ariaLabel: 'Strontium laser locking vapor cell',
       images: [
         {
-          imgUrl: 'img 1 url',
-          ariaLabel: 'img 1 aria label',
-          description: 'desc'
+          imgUrl: laser1,
+          ariaLabel: 'Finished Vapor Cell',
+          description: 'Finished Vapor Cell - This cell was heated to the vapor point of strontium and used to tune a laser.'
+        },
+        {
+          imgUrl: laser2,
+          ariaLabel: 'View inside the cell',
+          description: 'View inside the cell - Here you can see the chunk of strontium in the cell. The laser passed in the cell and a portion of the light would be absorbed as the strontium atoms were ionized.'
+        },
+        {
+          imgUrl: laser3,
+          ariaLabel: 'Strontium Atom Trap',
+          description: 'Strontium Atom Trap - This is a strontium atom trap under high vacuum The laser tuned from my cell  would ionize a stream of atoms from that trap.'
+        },
+        {
+          imgUrl: laser4,
+          ariaLabel: 'Grating used to back-tune',
+          description: 'Grating used to back-tune - This diffraction grating was used to take the particular absorption frequency from the laser and reflect it back into the diode to encourage the production of the frequency we needed.'
+        },
+        {
+          imgUrl: laser5,
+          ariaLabel: 'Laser case in testing',
+          description: 'Laser case in testing - The laser, which is in the near ultraviolet, was kept in a protective casing to prevent accidental exposure to eyes or skin.'
+        },
+        {
+          imgUrl: laser6,
+          ariaLabel: 'Me with the heated vacuum valve',
+          description: 'Me with the heated vacuum valve - This valve had to be heated to help prevent the buildup of strontium on the valve.'
+        },
+        {
+          imgUrl: laser7,
+          ariaLabel: 'APS Logo',
+          description: 'APS Logo - I was able to present this during the conference of the American Physical Society.'
         }
       ],
     },
-    {
-      title: 'project 1',
-      description: 'project 1 desc',
-      links: [
-        {
-          imgUrl: 'test url',
-          link: 'link url',
-          alt: ''
-        }
-      ],
-      briefDesc: '',
-      mainImgUrl: 'img url',
-      ariaLabel: 'img label',
-      images: [
-        {
-          imgUrl: 'img 1 url',
-          ariaLabel: 'img 1 aria label',
-          description: 'desc'
-        }
-      ],
-    }
   ]
 }
 

@@ -77,7 +77,7 @@ const RecentWork = (props: IProps) => {
       <div className={classes.displayHolder}>
         {
           props.recentWorkItems.map((workItem, i) => (
-            <RecentWorkCard key={i} {...workItem}/>
+            <RecentWorkCard key={i + workItem.title} {...workItem}/>
           ))
         }
       </div>

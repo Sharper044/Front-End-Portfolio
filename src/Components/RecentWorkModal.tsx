@@ -93,8 +93,8 @@ const RecentWorkModal = (props: IProps) => {
               className={classes.figure}
             >
               {
-                props.images.map((image, i) => (
-                  <div key={i} className={classes.center}>
+                props.images.map((image) => (
+                  <div key={image.imgUrl} className={classes.center}>
                     <img src={image.imgUrl} alt={image.ariaLabel} className={classes.images}/>
                     <Typography>{image.description}</Typography>
                   </div>
