@@ -72,7 +72,7 @@ const RecentWork = (props: IProps) => {
       <h1 className={classes.title}>{props.title}</h1>
       <Typography variant='subtitle1'>
         {props.description} 
-        <Link to={`${props.url}#contact`} className={classes.subheading}> Email me!</Link>
+        <Link to="/contact-me" className={classes.subheading}> Email me!</Link>
       </Typography>
       <div className={classes.displayHolder}>
         {

@@ -5,8 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@material-ui/styles": "^4.10.0",
     "@types/material-ui": "^0.21.7",
+    "emailjs-com": "^2.6.3",
     "formik": "^2.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -40,6 +42,7 @@
     "@types/yup": "^0.29.3",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.7.0",
+    "dotenv": "^8.2.0",
     "eslint-plugin-react": "^7.20.3",
     "typescript": "3.9.7"
   }

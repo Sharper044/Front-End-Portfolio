@@ -66,7 +66,7 @@ const Header = () => {
                   <MenuItem >Contact Me</MenuItem>
                 </a>
                 <Divider/>
-                <Link to="/code" className={classes.menuItems}>
+                <Link to="/" className={classes.menuItems}>
                   <MenuItem onClick={handleClose}>Home</MenuItem>
                 </Link>
                 <Link to="/blog" className={classes.menuItems}>
@@ -82,9 +82,9 @@ const Header = () => {
               <Link to="/blog" className={`${classes.menuItems} ${classes.button}`}>
                 <Button style={{color: 'white'}}>Blog</Button>
               </Link>
-              <a href="mailto:stuartharper044@gmail.com" className={`${classes.menuItems} ${classes.button}`}>
+              <Link to="/contact-me" className={`${classes.menuItems} ${classes.button}`}>
                 <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} >Contact Me</Button>
-              </a>
+              </Link>
             </div>
         }
       </div>

@@ -15,7 +15,7 @@ export interface ILandingProps {
 const useStyles = makeStyles((_theme: Theme) => ({
   root: {
     width: '100%',
-    paddingTop: '250px',
+    paddingTop: '150px',
   },
   title: {
     fontFamily: 'Russo One',

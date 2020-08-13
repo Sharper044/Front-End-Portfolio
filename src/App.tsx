@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import { theme } from './styles/theme';
 import Blog from './Pages/Blog';
 import Code from './Pages/Code';
+import ContactMe from './Pages/ContactMe';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -13,6 +14,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+// TODO: add all type interfaces into a single folder
 const App = () => {
   const classes = useStyles();
 
@@ -23,7 +25,7 @@ const App = () => {
         <Router>
           <Route path="/" exact component={Code}/>
           <Route path="/blog" component={Blog}/>
-          {/*<Route path="/contact-me" component={ContactMe}/>*/}
+          <Route path="/contact-me" component={ContactMe}/>
         </Router>
       </div>
     </ThemeProvider>
