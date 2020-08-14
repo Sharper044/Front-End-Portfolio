@@ -9,6 +9,7 @@
     "@material-ui/styles": "^4.10.0",
     "@types/material-ui": "^0.21.7",
     "emailjs-com": "^2.6.3",
+    "aws-amplify": "^3.0.23",
     "formik": "^2.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
