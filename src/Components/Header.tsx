@@ -4,8 +4,10 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Theme } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu'
 import { makeStyles, useTheme } from '@material-ui/styles';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import logo from '../assets/{S} HARPER logo cut.jpg'
+import { useAppContext } from "../lib/contextLib";
+import { Auth } from "aws-amplify";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -42,13 +44,21 @@ const Header = () => {
   const theme: Theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [anchorEl, setAnchorEl] = React.useState<any>(null);
+  const { isAuthenticated, userHasAuthenticated } = useAppContext();
+  const history = useHistory();
 
-  function handleClick(event: React.MouseEvent<SVGSVGElement, MouseEvent>) {
+  const handleClick = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
     setAnchorEl(event.currentTarget);
   }
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
+  }
+
+  const handleLogout = async () => {
+    await Auth.signOut();
+    userHasAuthenticated(false);
+    history.push("/");
   }
 
   return (
@@ -62,15 +72,22 @@ const Header = () => {
             <React.Fragment>
               <MenuIcon fontSize="large" onClick={handleClick}/>
               <Menu id="simple-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose} disableAutoFocusItem={true} className={classes.menu}>
-                <a href="mailto:stuartharper044@gmail.com" className={classes.menuItems}>
-                  <MenuItem >Contact Me</MenuItem>
-                </a>
+                {
+                  isAuthenticated ?
+                  <MenuItem className={classes.menuItems} onClick={handleLogout}>Logout</MenuItem>:
+                  <Link to="/login" className={classes.menuItems}>
+                    <MenuItem>Sign-In / Sign-up</MenuItem>
+                  </Link>
+                }
                 <Divider/>
                 <Link to="/" className={classes.menuItems}>
                   <MenuItem onClick={handleClose}>Home</MenuItem>
                 </Link>
                 <Link to="/blog" className={classes.menuItems}>
                   <MenuItem onClick={handleClose}>Blog</MenuItem>
+                </Link>
+                <Link to="/contact-me" className={classes.menuItems}>
+                  <MenuItem onClick={handleClose}>Contact Me</MenuItem>
                 </Link>
               </Menu>
             </React.Fragment>
@@ -83,8 +100,22 @@ const Header = () => {
                 <Button style={{color: 'white'}}>Blog</Button>
               </Link>
               <Link to="/contact-me" className={`${classes.menuItems} ${classes.button}`}>
-                <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} >Contact Me</Button>
+                <Button variant="outlined" style={{color: 'white'}} >Contact Me</Button>
               </Link>
+              {
+                isAuthenticated ?
+                <Button 
+                  className={`${classes.menuItems} ${classes.button}`} 
+                  onClick={handleLogout}
+                  style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} 
+                  variant="outlined" 
+                >
+                  Logout
+                </Button> :
+                <Link to="/login" className={`${classes.menuItems} ${classes.button}`}>
+                  <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} >Sign-In / Sign-up</Button>
+                </Link>
+              }
             </div>
         }
       </div>
