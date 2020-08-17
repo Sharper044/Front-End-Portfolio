@@ -69,9 +69,9 @@ const Header = () => {
                 <Link to="/" className={classes.menuItems}>
                   <MenuItem onClick={handleClose}>Home</MenuItem>
                 </Link>
-                <Link to="/blog" className={classes.menuItems}>
+                {/* <Link to="/blog" className={classes.menuItems}>
                   <MenuItem onClick={handleClose}>Blog</MenuItem>
-                </Link>
+                </Link> */}
               </Menu>
             </React.Fragment>
           :
@@ -79,9 +79,9 @@ const Header = () => {
               <Link to="/" className={`${classes.menuItems} ${classes.button}`}>
                 <Button style={{color: 'white'}}>Home</Button>
               </Link>
-              <Link to="/blog" className={`${classes.menuItems} ${classes.button}`}>
+              {/* <Link to="/blog" className={`${classes.menuItems} ${classes.button}`}>
                 <Button style={{color: 'white'}}>Blog</Button>
-              </Link>
+              </Link> */}
               <Link to="/contact-me" className={`${classes.menuItems} ${classes.button}`}>
                 <Button variant="outlined" style={{color: theme.palette.primary.light, borderColor: theme.palette.primary.light}} >Contact Me</Button>
               </Link>
